@@ -5,7 +5,7 @@
 
 function song () {
     
-    RNDTEMPO=$((RANDOM % 50 + 101))
+    RNDTEMPO=$((RANDOM % 200 + 51))
 
     echo "Song:"
     echo "  Tempo: $RNDTEMPO"
