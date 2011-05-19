@@ -6,7 +6,7 @@
 # Generate header and tempo
 function song () {
     
-    RNDTEMPO=$((RANDOM % 200 + 51))
+    RNDTEMPO=$((RANDOM % 100 + 100))
 
     echo "Song:"
     echo "  Tempo: $RNDTEMPO"

@@ -30,3 +30,14 @@ txt file with beats. It just generates a yaml file for beats :)
     ./randombeats.bash > randomsong.txt
     beats randomsong.txt
     open randomsong.wav
+
+And for your own fun do: 
+
+     ./randombeats.bash > rnd.txt && beats rnd.txt && open rnd.wav 
+
+Technical
+---------
+
+* Sometimes its a little bit to fast... for now i havent found the optimal speed
+range for generating good music
+
