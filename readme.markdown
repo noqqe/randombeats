@@ -14,6 +14,7 @@ phrase made me thinking...
 If this is true, it is probably possible that a randomized script makes better 
 music than me. 
 
+
 <img
 src="https://github.com/noqqe/randombeats/raw/master/challenge-accepted.png">
 
@@ -24,8 +25,8 @@ Usage
 Copy randombeats.bash to your music directory, execute the script and make the
 txt file with beats. It just generates a yaml file for beats :)
 
-  git clone http://github.com/noqqe/randombeats
-  cp randombeats/randombeats.bash /path/to/music
-  ./randombeats.bash > randomsong.txt
-  beats randomsong.txt
-  open randomsong.wav
+    git clone http://github.com/noqqe/randombeats
+    cp randombeats/randombeats.bash /path/to/music
+    ./randombeats.bash > randomsong.txt
+    beats randomsong.txt
+    open randomsong.wav
