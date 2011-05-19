@@ -3,6 +3,7 @@
 # License: GPL-3 <http://www.gnu.org/licenses/gpl-3.0.txt>
 # Date: Tuesday 2011-05-19
 
+# Generate header and tempo
 function song () {
     
     RNDTEMPO=$((RANDOM % 200 + 51))
@@ -12,6 +13,8 @@ function song () {
     echo "  Flow:"
 }
 
+# Generate flow and decide how much lines
+# are used
 function flow () {
 
     local COUNT=1
@@ -24,6 +27,7 @@ function flow () {
     echo
 }
 
+# choose a random wav from your directory
 function randomwav () {
     WAVS=(*.wav)
     N=${#WAVS[@]}
@@ -32,6 +36,7 @@ function randomwav () {
     echo $RNDWAV
 }
 
+# generate a randomized line of X and . 
 function rndchar () {
     local SIZE=16
     local COUNT=1
@@ -48,7 +53,8 @@ function rndchar () {
     done
 }
          
-
+# Gernerate all defined lines with randomized
+# lines and stuff
 function lines () {
 
     local LCOUNT=1
@@ -80,6 +86,7 @@ function lines () {
     done
 }
 
+# start fun :P 
 song
 flow
 lines
