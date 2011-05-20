@@ -1,0 +1,37 @@
+Song:
+  Tempo: 52
+  Flow:
+    - LINE1: x8
+    - LINE2: x4
+    - LINE3: x8
+    - LINE4: x4
+
+LINE1: 
+    - cw_airbase99_club_bd10.wav: ..X......X.....X|.XX....XX...XXXX
+    - cw_vermona_drm1_mk3_clap02.wav: ...X...X.XX.....|X.......X.X..X.X
+    - agogo_low.wav: X.......X....XX.|XX.....X.XXXX...
+    - cw_vermona_drm1_mk3_bd06.wav: X...X..X....X..X|.X.X..X....X.X..
+    - 25_AnaKick3.wav: ..X....X....X..X|..X...X.X..X....
+    - cw_vermona_drm1_mk3_bd26.wav: ....X.X.XXX...XX|.......X.....X.X
+    - 35_Modulo2.wav: ...XX..XXX......|.X........X..XXX
+    - cw_airbase99_tech_bd18.wav: ..X...X.X....X..|XXX....XXX.XX...
+
+LINE2: 
+    - 03ch_808HiHat.wav: .X.X.....X.XXXX.
+    - cw_airbase99_noisy_bd02.wav: X...XX..X...X...
+
+LINE3: 
+    - 15ch_MS_HH_HP.wav: XXX.X...X.XXX.X.|....X....XX..X..
+    - 057_DirtClap.wav: X.....X.X....X..|......XX..X.X...
+
+LINE4: 
+    - cw_airbase99_club_bd12.wav: XXX.....X.XX.XXX
+    - 124_Udus2.wav: ..X..X.......X..
+    - cw_vermona_drm1_mk3_tom04.wav: ...X.X.X..XX...X
+    - bass2.wav: .........X..X...
+    - 103_Iya_LDS.wav: .X..X.....XXX..X
+    - cw_vermona_drm1_mk3_hh05.wav: .....X..X...X.X.
+    - 26_AnaKick4.wav: X..XX..X..XXX..X
+    - 082_F_Drum_6.wav: XX..X....X..X...
+    - cw_vermona_drm1_mk3_bd28.wav: XXX........X.XXX
+
