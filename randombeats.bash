@@ -6,7 +6,7 @@
 # Generate header and tempo
 function song () {
     
-    RNDTEMPO=$((RANDOM % 100 + 100))
+    RNDTEMPO=$((RANDOM % 100 + 50))
 
     echo "Song:"
     echo "  Tempo: $RNDTEMPO"
@@ -18,10 +18,15 @@ function song () {
 function flow () {
 
     local COUNT=1
-    RNDLINES=$((RANDOM % 4 + 1))
+    RNDLINES=$((RANDOM % 6 + 2))
 
     while [ $COUNT -le $RNDLINES ]; do 
-        echo "    - LINE$COUNT: x4"
+        
+        if [ $((RANDOM % 2)) -ne 0 ]; then 
+            echo "    - LINE$COUNT: x8"
+        else
+            echo "    - LINE$COUNT: x4"
+        fi
         ((COUNT++))
     done
     echo
@@ -44,10 +49,10 @@ function rndchar () {
     local SIGN0="."
     while [ $COUNT -le $SIZE ]; do
         
-        if [ $((RANDOM % 2)) -ne 0 ]; then 
-            echo -n "X"
-        else 
+        if [ $((RANDOM % 3)) -ne 0 ]; then 
             echo -n "."
+        else 
+            echo -n "X"
         fi
     ((COUNT++))
     done
@@ -68,7 +73,7 @@ function lines () {
             DOUBLESIZE=0
         fi
 
-        RNDSOUND=$((RANDOM % 5 + 1 ))
+        RNDSOUND=$((RANDOM % 8 + 2 ))
         local SCOUNT=1
         while [ $SCOUNT -le $RNDSOUND ]; do
 
