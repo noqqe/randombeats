@@ -3,10 +3,30 @@
 # License: GPL-3 <http://www.gnu.org/licenses/gpl-3.0.txt>
 # Date: Tuesday 2011-05-19
 
+
+### Configuration
+# Speed of the Song 
+MAXTEMPO=100
+MINTEMPO=50
+
+# Lines in Flow 
+MAXLINES=6
+MINLINES=2
+
+# Sounds which are used for Song
+MAXSOUNDS=8
+MINSOUNDS=3
+
+# X'ses in Song line (1-20)
+# 1 = very much X'ses ( X.XXXX.XX..XXX.. )
+# 20 = not much X'ses ( X...…........ ) 
+SALTX=8
+
+### Functions 
 # Generate header and tempo
 function song () {
     
-    RNDTEMPO=$((RANDOM % 100 + 50))
+    RNDTEMPO=$((RANDOM % $MAXTEMPO + $MINTEMPO))
 
     echo "Song:"
     echo "  Tempo: $RNDTEMPO"
@@ -18,7 +38,7 @@ function song () {
 function flow () {
 
     local COUNT=1
-    RNDLINES=$((RANDOM % 6 + 2))
+    RNDLINES=$((RANDOM % $MAXLINES + $MINLINES))
 
     while [ $COUNT -le $RNDLINES ]; do 
         
@@ -49,7 +69,7 @@ function rndchar () {
     local SIGN0="."
     while [ $COUNT -le $SIZE ]; do
         
-        if [ $((RANDOM % 3)) -ne 0 ]; then 
+        if [ $((RANDOM % $SALTX)) -ne 0 ]; then 
             echo -n "."
         else 
             echo -n "X"
@@ -67,13 +87,15 @@ function lines () {
         echo "LINE$LCOUNT: "
        
 
+        # Randomize double size for this line
         if [ $((RANDOM % 2)) -ne 0 ]; then 
             DOUBLESIZE=1
         else    
             DOUBLESIZE=0
         fi
 
-        RNDSOUND=$((RANDOM % 8 + 2 ))
+        # Randomize number of used sounds
+        RNDSOUND=$((RANDOM % $MAXSOUNDS + $MINSOUNDS ))
         local SCOUNT=1
         while [ $SCOUNT -le $RNDSOUND ]; do
 
@@ -91,7 +113,7 @@ function lines () {
     done
 }
 
-# start fun :P 
+### Execute  
 song
 flow
 lines
